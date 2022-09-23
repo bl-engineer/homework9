@@ -119,14 +119,10 @@ You are required to submit the following for review:
 
 * The URL of the GitHub repository, with a unique name and a README describing the project
 
-# Result: Professional README Generator
-
-
+# Walkthrough Video: Demonstration of the functionality of the Professional README Generator application
 
 ---
 © Done by: Bocar Ly
 Assigment: Week 9 Homework 
-
-[Deployed_URL](https://bl-engineer.github.io/homework9/)
 
 [Github_URL](https://github.com/bl-engineer/homework9)
