@@ -28,46 +28,44 @@ This application is published under the ${license} license.
 
 // A function to generate markdown for README
 function generateMarkdown(data) {
-  const license = renderLicenseSection(data.application_license);
-  var output = renderLicenseBadge(data.application_license)
+  const license = renderLicenseSection(data.License);
+  var output = renderLicenseBadge(data.License)
   output += `
- # ${data.application_title}
-
-`;
-//   return `# ${data.title}
-
-// `;
-
-// Description
-output += `${data.description}
+ # ${data.Project_title}
 `;
 
-//Table of contents
-output += `## Application's Table of Contents
-1. [Installation](#installation-instructions)
-2. [Usage](#usage-guide)
+// Give a description
+output += `${data.Description}
+`;
+
+//Adds table of contents
+output += `## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
 `;
 if(license != '') {
-  output += `3. [License](#license)
-4. [Guidelines](#contribution-guide)
-5. [Instructions](#test-instructions)
-6. [Questions](#questions)
+  output += `
+3. [License](#license)
+4. [Credits](#credits)
+5. [Tests](#tests)
+6. [Contact](#contact)
 `;
 } else {
-  output += `3. [Guidelines](#contribution-guide)
-4. [Instructions](#test-instructions)
-5. [Questions](#questions)
+  output += `
+3. [Credits](#credits)
+4. [Tests](#tests)
+5. [Contact](#contact)
 `;
 }
 
 // Installation
-output += `## Installation Instructions
-${data.installation}
+output += `## Installation 
+${data.Installation}
 `;
 
 // Usage
-output += `## Usage Guide
-${data.usage}
+output += `## Usage
+${data.Usage}
 `;
 
 // License
@@ -76,21 +74,22 @@ if(license != '') {
 }
 
 // Contributing
-output += `## Contribution Guide
-${data.guidelines}
+output += `## Credits
+${data.Credits}
 `;
 
 // Tests
-output += `## Test Instructions
-${data.test}
+output += `## Tests
+${data.Tests}
 `;
 
-// Questions
-output += `## Questions
-Github: [${data.github_username}](https://github.com/${data.github_username})  
-Email: ${data.email_address}`;
+// Questions asked by contacting creator of the app
+output += `## Contact
+Github:(https://github.com/${data.GitHub_username})  
+Email: ${data.Email_address}`;
 
 return output;
+
 }
 
 module.exports = generateMarkdown;

@@ -7,38 +7,38 @@ const fs = require('fs');
 const questions = [
     {
         type: 'input',
-        name: 'application_title',
-        message: "Please Enter your application title: "
+        name: 'Project_title',
+        message: "Enter your project title: "
     },
     {
         type: 'input',
-        name: 'description',
-        message: "Please Enter a description for your application: "
+        name: 'Description',
+        message: "Enter a description for your application: "
     },
     {
         type: 'input',
-        name: 'installation',
-        message: "Please Enter installation instructions for your application: "
+        name: 'Installation',
+        message: "Enter installation instructions for your application: "
     },
     {
         type: 'input',
-        name: 'usage',
-        message: "Please Enter usage documentations for your application: "
+        name: 'Usage',
+        message: "Enter usage documentations for your application: "
     },
     {
         type: 'input',
-        name: 'guidelines',
-        message: "Please Enter contribution guidelines for your application: "
+        name: 'Credits',
+        message: "Enter collaborators or contributors to your application: "
     },
     {
         type: 'input',
-        name: 'test',
-        message: "Please Enter test instructions for your application: "
+        name: 'Tests',
+        message: "Enter testing instructions for your application: "
     },
     {
         type: 'list',
-        name: 'application_license',
-        message: "Please Select a license for your application: ",
+        name: 'License',
+        message: "Select a license for your application: ",
         choices: ['Apache 2.0', 'Creative Commons 0', 'BSD 3-Clause', 'GNU GPLv3', 'Mozilla Public License 2.0', 'Unlicense'],
         filter(val) {
             return val;
@@ -46,13 +46,13 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'github_username',
-        message: "Please Type your GitHub username: "
+        name: 'GitHub_username',
+        message: "Type your GitHub username: "
     },
     {
         type: 'input',
-        name: 'email_address',
-        message: "Please Type your email address: "
+        name: 'Email_address',
+        message: "Type your email address: "
     }
 ];
 
@@ -69,7 +69,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
-            writeToFile("readme.md", answers);
+            writeToFile("README.md", answers);
         })
         .catch((error) => {
             console.log(error);
