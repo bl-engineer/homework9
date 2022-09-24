@@ -31,11 +31,12 @@ function generateMarkdown(data) {
   const license = renderLicenseSection(data.License);
   var output = renderLicenseBadge(data.License)
   output += `
- # ${data.Project_title}
+ # ${data.title}
 `;
 
 // Give a description
-output += `${data.Description}
+output += `## Description
+${data.description}
 `;
 
 //Adds table of contents
@@ -46,26 +47,26 @@ output += `## Table of Contents
 if(license != '') {
   output += `
 3. [License](#license)
-4. [Credits](#credits)
+4. [Contributing](#contributing)
 5. [Tests](#tests)
-6. [Contact](#contact)
+6. [Questions](#questions)
 `;
 } else {
   output += `
-3. [Credits](#credits)
+3. [Contributing](#contributing)
 4. [Tests](#tests)
-5. [Contact](#contact)
+5. [Questions](#questions)
 `;
 }
 
 // Installation
 output += `## Installation 
-${data.Installation}
+${data.installation_instructions}
 `;
 
 // Usage
 output += `## Usage
-${data.Usage}
+${data.usage_information}
 `;
 
 // License
@@ -74,19 +75,19 @@ if(license != '') {
 }
 
 // Contributing
-output += `## Credits
-${data.Credits}
+output += `## Contributing
+${data.contribution_guidelines}
 `;
 
 // Tests
 output += `## Tests
-${data.Tests}
+${data.test_instructions}
 `;
 
-// Questions asked by contacting creator of the app
-output += `## Contact
-Github:(https://github.com/${data.GitHub_username})  
-Email: ${data.Email_address}`;
+// Questions asked to the creator of the app through contact
+output += `## Questions
+Github:(https://github.com/${data.github})  
+Email: ${data.email}`;
 
 return output;
 

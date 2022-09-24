@@ -33,5 +33,29 @@ THEN I am taken to the corresponding section of the README
 # Walkthrough Video Link: Demonstration of the functionality of the Professional README Generator application
 
 ---
-© Done by: Bocar Ly
-Assigment: Week 9 Homework 
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+ # Bocar's project
+## Description
+A professional readme generator application
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
+## Installation 
+instructions of the installation process of the application
+## Usage
+usage information
+## License:
+This application is published under the GNU GPLv3 license.
+## Contributing
+collaborators or contributors
+## Tests
+Testing instruction
+## Questions
+Github:(https://github.com/bl-engineer)  
+Email: bocfri@yahoo.fr

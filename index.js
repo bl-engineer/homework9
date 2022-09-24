@@ -7,33 +7,23 @@ const fs = require('fs');
 const questions = [
     {
         type: 'input',
-        name: 'Project_title',
+        name: 'title',
         message: "Enter your project title: "
     },
     {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: "Enter a description for your application: "
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation_instructions',
         message: "Enter installation instructions for your application: "
     },
     {
         type: 'input',
-        name: 'Usage',
-        message: "Enter usage documentations for your application: "
-    },
-    {
-        type: 'input',
-        name: 'Credits',
-        message: "Enter collaborators or contributors to your application: "
-    },
-    {
-        type: 'input',
-        name: 'Tests',
-        message: "Enter testing instructions for your application: "
+        name: 'usage_information',
+        message: "Enter usage information for your application: "
     },
     {
         type: 'list',
@@ -46,13 +36,24 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'GitHub_username',
-        message: "Type your GitHub username: "
+        name: 'contribution_guidelines',
+        message: "Enter contribution guidelines to your application: "
     },
     {
         type: 'input',
-        name: 'Email_address',
-        message: "Type your email address: "
+        name: 'test_instructions',
+        message: "Enter test instructions for your application: "
+    },
+   
+    {
+        type: 'input',
+        name: 'github',
+        message: "Enter your GitHub username: "
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "Enter your email address: "
     }
 ];
 
